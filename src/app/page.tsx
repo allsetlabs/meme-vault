@@ -180,6 +180,7 @@ function ClipCard({ clip, isEditing, onEdit, isAuthenticated }: ClipCardProps) {
         {/* Main content */}
         <div className="relative h-full w-full">
           {isPlaying ? (
+            // eslint-disable-next-line jsx-a11y/media-has-caption
             <video
               ref={videoRef}
               src={paths.video}
@@ -354,6 +355,7 @@ export default function Home() {
 
   useEffect(() => {
     if (isFetching) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsSpinning(true);
     } else if (isSpinning) {
       // Wait for one full rotation (1s) before stopping

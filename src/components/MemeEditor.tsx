@@ -334,6 +334,7 @@ export function MemeEditor({
 
     const urlParam = searchParams.get('url');
     if (urlParam) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setYoutubeUrl(urlParam);
       // Wait for YouTube API to load before initializing
       const checkAndLoad = () => {
@@ -354,6 +355,7 @@ export function MemeEditor({
     if (isEditMode && clip) {
       const id = extractVideoId(clip.source_url);
       if (id) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setVideoId(id);
         // Wait for YouTube API to load before initializing
         const checkAndLoad = () => {

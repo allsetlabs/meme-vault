@@ -104,6 +104,7 @@ async function getGitHubClipDirs(token: string, repo: string, branch: string): P
 /**
  * Check if a specific clip directory exists in GitHub.
  */
+// eslint-disable-next-line unused-imports/no-unused-vars
 async function clipExistsInGitHub(
   clipId: string,
   token: string,

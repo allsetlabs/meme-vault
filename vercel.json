@@ -1,0 +1,5 @@
+{
+  "installCommand": "cd ../.. && npm install --prefix modules/component && npm install --prefix modules/meme-vault",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next"
+}

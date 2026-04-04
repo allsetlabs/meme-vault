@@ -1,0 +1,49 @@
+{
+  "name": "meme-vault",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run db:start && NODE_OPTIONS='--no-webstorage' next dev",
+    "prod": "NODE_ENV=production NODE_OPTIONS='--no-webstorage' next dev",
+    "build": "next build",
+    "serve": "next start",
+    "type-check": "tsc --noEmit",
+    "start": "npm run dev",
+    "dev:worker": "dotenv -e .env.development -- tsx worker/index.ts",
+    "prod:worker": "dotenv -e .env -- tsx worker/index.ts",
+    "dev:cron": "dotenv -e .env.development -- tsx cron/sync-storage.ts",
+    "prod:cron": "dotenv -e .env -- tsx cron/sync-storage.ts",
+    "db:start": "npx supabase start && npm run db:sync",
+    "db:stop": "npx supabase stop",
+    "db:status": "npx supabase status",
+    "db:reset": "./scripts/db-reset.sh",
+    "db:sync": "./scripts/db-setup.sh",
+    "scheduler:install": "./scripts/install.sh",
+    "scheduler:uninstall": "./scripts/uninstall.sh",
+    "scheduler:status": "./scripts/status.sh",
+    "scheduler:logs": "tail -f /tmp/meme-vault-worker.log /tmp/meme-vault-cron.log"
+  },
+  "dependencies": {
+    "@subbiah/reusable": "file:../component",
+    "@supabase/supabase-js": "2.90.1",
+    "@tanstack/react-query": "5.64.1",
+    "lucide-react": "^0.546.0",
+    "next": "15.3.8",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.9.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "autoprefixer": "10.4.19",
+    "dotenv": "16.4.5",
+    "dotenv-cli": "11.0.0",
+    "postcss": "8.4.38",
+    "supabase": "2.72.7",
+    "tailwindcss": "3.4.3",
+    "tsx": "4.19.2",
+    "typescript": "5.9.3"
+  }
+}

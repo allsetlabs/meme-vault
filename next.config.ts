@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['@subbiah/reusable'],
+  transpilePackages: ['@allsetlabs/reusable'],
   eslint: {
     ignoreDuringBuilds: true,
   },

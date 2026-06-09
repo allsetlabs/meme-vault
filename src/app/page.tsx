@@ -3,29 +3,29 @@
 import { useRef, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Card, CardContent } from '@subbiah/reusable/components/ui/card';
-import { Button } from '@subbiah/reusable/components/ui/button';
+import { Card, CardContent } from '@allsetlabs/reusable/components/ui/card';
+import { Button } from '@allsetlabs/reusable/components/ui/button';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@subbiah/reusable/components/ui/dialog';
+} from '@allsetlabs/reusable/components/ui/dialog';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from '@subbiah/reusable/components/ui/dropdown-menu';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@subbiah/reusable/components/ui/tooltip';
+} from '@allsetlabs/reusable/components/ui/dropdown-menu';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@allsetlabs/reusable/components/ui/tooltip';
 import type { Clip } from '@/types/clip';
 import { getClipPaths } from '@/types/clip';
 import { MemeEditor } from '@/components/MemeEditor';
-import { useAuth } from '@subbiah/reusable/statefulComponents/auth/context';
-import { useThemeContext, Theme } from '@subbiah/reusable/statefulComponents/theme/context';
-import { useAudioContext } from '@subbiah/reusable/statefulComponents/audio/context';
-import { useCursorContext } from '@subbiah/reusable/statefulComponents/cursor/context';
+import { useAuth } from '@allsetlabs/reusable/statefulComponents/auth/context';
+import { useThemeContext, Theme } from '@allsetlabs/reusable/statefulComponents/theme/context';
+import { useAudioContext } from '@allsetlabs/reusable/statefulComponents/audio/context';
+import { useCursorContext } from '@allsetlabs/reusable/statefulComponents/cursor/context';
 import {
   Sun,
   Moon,

@@ -25,7 +25,7 @@
     "scheduler:logs": "tail -f /tmp/meme-vault-worker.log /tmp/meme-vault-cron.log"
   },
   "dependencies": {
-    "@subbiah/reusable": "file:../component",
+    "@allsetlabs/reusable": "file:../ui",
     "@supabase/supabase-js": "2.90.1",
     "@tanstack/react-query": "5.64.1",
     "lucide-react": "^0.546.0",

@@ -1,9 +1,9 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { AuthLogin } from '@subbiah/reusable/components/auth-login';
-import { useAuth } from '@subbiah/reusable/statefulComponents/auth/context';
-import type { AuthTokenResponse } from '@subbiah/reusable/types/auth';
+import { AuthLogin } from '@allsetlabs/reusable/components/auth-login';
+import { useAuth } from '@allsetlabs/reusable/statefulComponents/auth/context';
+import type { AuthTokenResponse } from '@allsetlabs/reusable/types/auth';
 
 async function googleLogin(credential: string): Promise<AuthTokenResponse> {
   const response = await fetch('/api/auth/google-login', {

@@ -3,17 +3,17 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { Card, CardContent } from '@subbiah/reusable/components/ui/card';
-import { Button } from '@subbiah/reusable/components/ui/button';
-import { Input } from '@subbiah/reusable/components/ui/input';
-import { Label } from '@subbiah/reusable/components/ui/label';
-import { Textarea } from '@subbiah/reusable/components/ui/textarea';
+import { Card, CardContent } from '@allsetlabs/reusable/components/ui/card';
+import { Button } from '@allsetlabs/reusable/components/ui/button';
+import { Input } from '@allsetlabs/reusable/components/ui/input';
+import { Label } from '@allsetlabs/reusable/components/ui/label';
+import { Textarea } from '@allsetlabs/reusable/components/ui/textarea';
 import {
   VideoRangeSlider,
   formatTimeToMSS,
   parseMSSToSeconds,
-} from '@subbiah/reusable/components/ui/video-range-slider';
-import { useAuth } from '@subbiah/reusable/statefulComponents/auth/context';
+} from '@allsetlabs/reusable/components/ui/video-range-slider';
+import { useAuth } from '@allsetlabs/reusable/statefulComponents/auth/context';
 import type { Clip, UpdateClipRequest, QueueJobResponse } from '@/types/clip';
 
 declare global {

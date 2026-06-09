@@ -1,7 +1,7 @@
 'use client';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { InitializeReusableChunks } from '@subbiah/reusable/InitializeReusableChunks';
+import { InitializeReusableChunks } from '@allsetlabs/reusable/InitializeReusableChunks';
 
 const queryClient = new QueryClient();
 

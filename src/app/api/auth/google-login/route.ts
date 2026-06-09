@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
-import type { AuthTokenResponse } from '@subbiah/reusable/types/auth';
+import type { AuthTokenResponse } from '@allsetlabs/reusable/types/auth';
 
 const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_ANON_KEY!);
 

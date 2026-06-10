@@ -1,14 +1,14 @@
 # Meme Vault — Meme Collection & Management App
 
-## Goal
+## Purpose
 
 Collect, process, and publish meme clips from YouTube through an automated media pipeline to GitHub and Instagram.
 
-## Description
+## Mental Model
 
 A Next.js web application for managing meme clips. The pipeline downloads videos from YouTube, burns captions, converts to GIFs, and uploads to GitHub (storage) and Instagram. Supabase stores metadata. A background worker handles async pipeline jobs and a cron job syncs GitHub storage with Supabase metadata.
 
-## Architecture
+## Where Things Go
 
 ```
 meme-vault/
@@ -26,9 +26,22 @@ meme-vault/
 
 Stack: Next.js + React + TypeScript + Tailwind CSS. Uses `@allsetlabs/reusable` from `../forge`. Supabase for database and file storage.
 
-## Progress
+## Development Commands
+
+- `make setup` — check system dependencies
+- `make install` — install dependencies
+- `make start` — start app, worker, and cron in tmux
+- `npm run build` — build the Next.js app
+- `npm run type-check` — verify TypeScript
+- `npm run db:start` / `npm run db:stop` — manage local Supabase
+
+## Current Capabilities
 
 Core media pipeline is functional. Web UI, worker, and cron are running. GitHub and Instagram upload integrations are in place.
+
+## Testing Expectations
+
+Run `npm run type-check` after code changes. Run `npm run build` for app or pipeline changes that affect runtime behavior. For UI changes, open the affected page, test the workflow, and check the browser console.
 
 ## Media Pipeline
 

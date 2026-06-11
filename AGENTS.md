@@ -24,7 +24,7 @@ meme-vault/
 └── independent_node_skills/  # Standalone Node.js scripts for media processing
 ```
 
-Stack: Next.js + React + TypeScript + Tailwind CSS. Uses `@allsetlabs/reusable` from `../forge`. Supabase for database and file storage.
+Stack: Next.js + React + TypeScript + Tailwind CSS. Uses `@allsetlabs/forge` from `../forge`. Supabase for database and file storage.
 
 ## Development Commands
 

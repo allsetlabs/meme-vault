@@ -7,7 +7,7 @@ function YouTubeMemeCreatorContent() {
   return (
     <div className="min-h-screen p-4 md:p-8">
       <div className="mx-auto max-w-4xl">
-        <h1 className="mb-8 text-3xl font-bold text-foreground">YouTube Meme Creator</h1>
+        <h1 className="text-foreground mb-8 text-3xl font-bold">YouTube Meme Creator</h1>
         <MemeEditor playerId="youtube-player-create" />
       </div>
     </div>

@@ -527,7 +527,7 @@ export function MemeEditor({
                 </Button>
               </div>
             </div>
-            {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
+            {error && <p className="text-destructive mt-2 text-sm">{error}</p>}
           </CardContent>
         </Card>
       )}
@@ -539,7 +539,7 @@ export function MemeEditor({
             {/* Small iframe scaled up visually - YouTube sends low quality to small player */}
             <div
               ref={playerWrapperRef}
-              className="aspect-video w-full overflow-hidden rounded-lg bg-muted"
+              className="bg-muted aspect-video w-full overflow-hidden rounded-lg"
             >
               <div
                 ref={playerContainerRef}
@@ -551,7 +551,7 @@ export function MemeEditor({
             </div>
 
             {!isPlayerReady && (
-              <div className="mt-4 text-center text-muted-foreground">Loading video...</div>
+              <div className="text-muted-foreground mt-4 text-center">Loading video...</div>
             )}
           </CardContent>
         </Card>
@@ -700,7 +700,7 @@ export function MemeEditor({
                 </div>
               </div>
 
-              <p className="mt-4 text-sm text-muted-foreground">
+              <p className="text-muted-foreground mt-4 text-sm">
                 Clip duration: {formatTimeToMSS(endTime - startTime)}s (min 2s)
               </p>
             </CardContent>

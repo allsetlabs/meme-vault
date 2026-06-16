@@ -382,7 +382,7 @@ export default function Home() {
         {/* Row 1: Title + Refresh + Avatar (mobile) / Title + Tabs + Refresh (desktop left) */}
         <div className="flex items-center justify-between md:justify-start md:gap-4">
           <div className="flex items-center gap-2">
-            <h1 className="text-xl font-bold text-foreground md:text-3xl">Meme Vault</h1>
+            <h1 className="text-foreground text-xl font-bold md:text-3xl">Meme Vault</h1>
 
             {/* Refresh - mobile only (next to title) */}
             <Button
@@ -414,7 +414,7 @@ export default function Home() {
           {/* Tabs + Refresh - desktop only */}
           {isAuthenticated && (
             <div className="hidden items-center gap-2 md:flex">
-              <div className="rounded-md border border-input">
+              <div className="border-input rounded-md border">
                 <Button
                   variant={filter === 'pending' ? 'default' : 'ghost'}
                   size="sm"
@@ -479,7 +479,7 @@ export default function Home() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button
-                    className="h-10 w-10 select-none overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    className="focus:ring-primary h-10 w-10 select-none overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2"
                     aria-label="Profile menu"
                   >
                     {user?.picture ? (
@@ -489,8 +489,8 @@ export default function Home() {
                         className="h-full w-full object-cover"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center bg-muted">
-                        <User className="h-5 w-5 text-muted-foreground" />
+                      <div className="bg-muted flex h-full w-full items-center justify-center">
+                        <User className="text-muted-foreground h-5 w-5" />
                       </div>
                     )}
                   </button>
@@ -498,8 +498,8 @@ export default function Home() {
                 <DropdownMenuContent align="end" className="w-56">
                   {/* Theme selector */}
                   <div className="px-2 py-2">
-                    <p className="mb-2 text-xs font-medium text-muted-foreground">Theme</p>
-                    <div className="flex gap-1 rounded-md bg-muted p-1">
+                    <p className="text-muted-foreground mb-2 text-xs font-medium">Theme</p>
+                    <div className="bg-muted flex gap-1 rounded-md p-1">
                       {[
                         { value: 'light' as Theme, icon: Sun, label: 'Light' },
                         { value: 'dark' as Theme, icon: Moon, label: 'Dark' },
@@ -566,12 +566,12 @@ export default function Home() {
                   )}
 
                   {/* Divider */}
-                  <div className="mx-2 my-1 h-px bg-border" />
+                  <div className="bg-border mx-2 my-1 h-px" />
 
                   {/* Logout */}
                   <DropdownMenuItem
                     onClick={logout}
-                    className="mx-2 cursor-pointer text-destructive focus:text-destructive"
+                    className="text-destructive focus:text-destructive mx-2 cursor-pointer"
                   >
                     <LogOut className="mr-2 h-4 w-4" />
                     <span>Logout</span>
@@ -590,7 +590,7 @@ export default function Home() {
         <div className="flex items-center justify-between md:gap-4">
           {/* Tabs - mobile only */}
           {isAuthenticated && (
-            <div className="flex rounded-md border border-input md:hidden">
+            <div className="border-input flex rounded-md border md:hidden">
               <Button
                 variant={filter === 'pending' ? 'default' : 'ghost'}
                 size="sm"
@@ -632,7 +632,7 @@ export default function Home() {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button
-                    className="h-10 w-10 select-none overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    className="focus:ring-primary h-10 w-10 select-none overflow-hidden rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2"
                     aria-label="Profile menu"
                   >
                     {user?.picture ? (
@@ -642,8 +642,8 @@ export default function Home() {
                         className="h-full w-full object-cover"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center bg-muted">
-                        <User className="h-5 w-5 text-muted-foreground" />
+                      <div className="bg-muted flex h-full w-full items-center justify-center">
+                        <User className="text-muted-foreground h-5 w-5" />
                       </div>
                     )}
                   </button>
@@ -651,8 +651,8 @@ export default function Home() {
                 <DropdownMenuContent align="end" className="w-56">
                   {/* Theme selector */}
                   <div className="px-2 py-2">
-                    <p className="mb-2 text-xs font-medium text-muted-foreground">Theme</p>
-                    <div className="flex gap-1 rounded-md bg-muted p-1">
+                    <p className="text-muted-foreground mb-2 text-xs font-medium">Theme</p>
+                    <div className="bg-muted flex gap-1 rounded-md p-1">
                       {[
                         { value: 'light' as Theme, icon: Sun, label: 'Light' },
                         { value: 'dark' as Theme, icon: Moon, label: 'Dark' },
@@ -719,12 +719,12 @@ export default function Home() {
                   )}
 
                   {/* Divider */}
-                  <div className="mx-2 my-1 h-px bg-border" />
+                  <div className="bg-border mx-2 my-1 h-px" />
 
                   {/* Logout */}
                   <DropdownMenuItem
                     onClick={logout}
-                    className="mx-2 cursor-pointer text-destructive focus:text-destructive"
+                    className="text-destructive focus:text-destructive mx-2 cursor-pointer"
                   >
                     <LogOut className="mr-2 h-4 w-4" />
                     <span>Logout</span>
@@ -741,7 +741,7 @@ export default function Home() {
       </header>
 
       {filteredClips.length === 0 ? (
-        <div className="text-center text-muted-foreground">No {filter} clips found.</div>
+        <div className="text-muted-foreground text-center">No {filter} clips found.</div>
       ) : (
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {filteredClips.map((clip) => (
